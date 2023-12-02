@@ -60,7 +60,7 @@ lh = exp(-0.5*AICTab$delta)
 AICTab$w = round(lh/sum(lh), 2)
 AICTab
 
-#Calculating the standrad errors for the OL depending on the hostplant and patry-level
+#Calculating the standard errors for the OL depending on the hostplant and patry-level
 ses = tapply(log(dat_fem$OL),                              
              list(dat_fem$Hostplant, dat_fem$Patry), 
              function(x) sd(x)/sqrt(sum(!is.na(x))))
